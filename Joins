@@ -1,0 +1,29 @@
+1) How to find the films in which an actor named Nick acted ?
+SELECT title FROM film
+INNER JOIN film_actor
+ON film_actor.film_id = film.film_id
+INNER JOIN actor
+ON film_actor.actor_id = actor.actor_id
+WHERE actor.first_name = 'Nick';
+
+
+
+2) How to fetch all the starttimes of each game?
+SELECT starttime, name from cd.bookings
+INNER JOIN cd.facilities
+ON cd.bookings.facid = cd.facilities.facid;
+
+
+
+3) How to find the booking of tennis courts?
+SELECT starttime, name from cd.bookings
+INNER JOIN cd.facilities
+ON cd.bookings.facid = cd.facilities.facid
+WHERE cd.facilities.name LIKE ('Tennis Court%')
+
+
+
+
+
+
+
