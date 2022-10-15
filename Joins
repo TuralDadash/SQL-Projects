@@ -15,11 +15,14 @@ ON cd.bookings.facid = cd.facilities.facid;
 
 
 
-3) How to find the booking of tennis courts?
-SELECT starttime, name from cd.bookings
+3) How to find the booking of tennis courts after 21st of September?
+SELECT starttime, name FROM cd.bookings
 INNER JOIN cd.facilities
 ON cd.bookings.facid = cd.facilities.facid
-WHERE cd.facilities.name LIKE ('Tennis Court%')
+WHERE cd.facilities.name LIKE ('Tennis Court%') AND cd.bookings.starttime >= '2012-09-21';
+
+
+
 
 
 
