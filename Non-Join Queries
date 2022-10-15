@@ -1,0 +1,7 @@
+1) How to find the age of oldest person who was a gold medalist?
+SELECT * from olympics_history
+WHERE medal = 'Gold'
+ORDER BY age DESC
+
+
+2) 
